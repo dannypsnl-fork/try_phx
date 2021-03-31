@@ -1,4 +1,4 @@
-defmodule TryPhxWeb.PageController do
+defmodule TryPhxWeb.HelloController do
   use TryPhxWeb, :controller
 
   def index(conn, _params) do
