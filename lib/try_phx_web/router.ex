@@ -17,6 +17,7 @@ defmodule TryPhxWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    get "/hello", PageController, :hello
   end
 
   # Other scopes may use custom stacks.
