@@ -19,6 +19,7 @@ defmodule TryPhxWeb.Router do
     get "/", PageController, :index
     get "/hello", HelloController, :index
     get "/hello/:name", HelloController, :show
+    get "/todolist", TodolistController, :index
   end
 
   # Other scopes may use custom stacks.
