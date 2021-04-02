@@ -17,8 +17,10 @@ defmodule TryPhxWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+
     get "/hello", HelloController, :index
     get "/hello/:name", HelloController, :show
+
     get "/todolist", TodolistController, :index
   end
 
