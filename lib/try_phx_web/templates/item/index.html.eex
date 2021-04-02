@@ -1,0 +1,23 @@
+<h1>Listing Items</h1>
+
+<%= render "form.html", Map.put(assigns, :action, Routes.item_path(@conn, :create)) %>
+
+<table>
+  <thead>
+    <tr>
+      <th>TODOs</th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for item <- @items do %>
+    <tr>
+      <td><%= item.text %></td>
+      <td>
+        <span><%= link "Show", to: Routes.item_path(@conn, :show, item) %></span>
+        <span><%= link "Edit", to: Routes.item_path(@conn, :edit, item) %></span>
+        <span><%= link "Delete", to: Routes.item_path(@conn, :delete, item), method: :delete %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
