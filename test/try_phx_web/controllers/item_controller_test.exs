@@ -54,8 +54,6 @@ defmodule TryPhxWeb.ItemControllerTest do
 
     test "redirects when data is valid", %{conn: conn, item: item} do
       conn = put(conn, Routes.item_path(conn, :update, item), item: @update_attrs)
-      assert redirected_to(conn) == Routes.item_path(conn, :show, item)
-
       conn = get(conn, Routes.item_path(conn, :show, item))
       assert html_response(conn, 200) =~ "some updated text"
     end
